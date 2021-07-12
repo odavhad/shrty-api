@@ -51,6 +51,18 @@ def get_all_urls(request: Request, db: Session = Depends(get_db)):
     return templates.TemplateResponse("index.html", {"request": request, "urls": urls})
 
 
+@app.get("/json")
+def get_all_urls(db: Session = Depends(get_db)):
+    urls = (
+        db.query(models.URLModel.short_tag, models.URLModel.target_url)
+        .filter(models.URLModel.public == True)
+        .order_by(models.URLModel.short_tag)
+        .all()
+    )
+
+    return urls
+
+
 @app.get("/stats", tags=["auth"])
 def get_url_stats(
     db: Session = Depends(get_db), user: str = Depends(auth_handler.auth_wrapper)
