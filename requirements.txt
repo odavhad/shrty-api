@@ -13,6 +13,7 @@ fastapi==0.66.0
 graphene==2.1.8
 graphql-core==2.3.2
 graphql-relay==2.0.1
+greenlet==1.1.0
 h11==0.12.0
 httptools==0.1.2
 idna==2.10
@@ -32,6 +33,7 @@ regex==2021.7.6
 requests==2.25.1
 Rx==1.6.1
 six==1.16.0
+SQLAlchemy==1.4.20
 starlette==0.14.2
 toml==0.10.2
 typing-extensions==3.10.0.0
