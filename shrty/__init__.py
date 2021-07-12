@@ -13,10 +13,10 @@ models.Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount("/static", StaticFiles(directory="shrty/static"), name="static")
 
 
-templates = Jinja2Templates(directory="app/templates")
+templates = Jinja2Templates(directory="shrty/templates")
 auth_handler = auth.AuthHandler()
 
 
