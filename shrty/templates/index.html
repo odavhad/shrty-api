@@ -1,73 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>shrty</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
     <style>
-      html {
-        height: 100%;
-      }
-
-      body {
-        min-height: 100%;
-        height: max-content;
-        background-color: beige;
-      }
-
-      .headin {
-        padding-top: 3%;
-        padding-left: 20%;
-        padding-right: 20%;
-        padding-bottom: 2%;
-        text-align: center;
+      .body {
+        width: 80%;
+        max-width: 950px;
+        margin: 30px auto 0;
       }
     </style>
   </head>
-  <body class="full">
-    <div class="container headin">
-      <h1 class="title is-1">shrty</h1>
-    </div>
-
-    <div class="container" style="padding-left: 20%; padding-right: 20%">
-      <div class="card">
-        <div class="card-content">
-          <table class="table is-fullwidth is-striped">
-            <thead style="text-align: center">
-              <tr>
-                <th><p class="title is-4">tag</p></th>
-                <th><p class="title is-4">link</p></th>
-              </tr>
-            </thead>
-            <tfoot style="text-align: center">
-              <tr>
-                <th><p class="title is-4">tag</p></th>
-                <th><p class="title is-4">link</p></th>
-              </tr>
-            </tfoot>
-            <body style="text-align: center">
-              {% for url in urls %}
-              <tr>
-                <td>
-                  <a href="{{ url.short_tag }}" target="_blank"
-                    >/{{ url.short_tag }}</a
-                  >
-                </td>
-                <td>
-                  <a href="{{ url.short_tag }}" target="_blank"
-                    >{{ url.target_url }}</a
-                  >
-                </td>
-              </tr>
-              {% endfor %}
-            </body>
-          </table>
-        </div>
-      </div>
+  <body>
+    <div class="body">
+      <p class="title is-2">shrty</p>
+      <table class="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>
+              <p class="title is-5">tag</p>
+            </th>
+            <th>
+              <p class="title is-5">link</p>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>
+              <p class="title is-5">tag</p>
+            </th>
+            <th>
+              <p class="title is-5">link</p>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for url in urls %}
+          <tr>
+            <td>
+              <p class="subtitle is-6">
+                <a href="{{ url.short_tag }}" target="_blank"
+                  >/{{ url.short_tag }}</a
+                >
+              </p>
+            </td>
+            <td>
+              <p class="subtitle is-6">
+                <a href="{{ url.short_tag }}" target="_blank"
+                  >{{ url.target_url }}</a
+                >
+              </p>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
