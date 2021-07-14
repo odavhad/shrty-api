@@ -12,19 +12,19 @@ Python, FastAPI, PostgreSQL, SQLAlchemy and PyJWT.
 
 ## Getting Started
 
-1. Fork the repository and then clone the repository locally. Type the following command/s in the terminal. \
+1. Fork the repository and then clone the repository locally. Type the following command/s in the terminal.
 
    ```
    git clone https://github.com/<YOUR USERNAME>/shrty-api.git
    ```
 
-2. Navigate to the app directory. Type the following command/s in the terminal. \
+2. Navigate to the app directory. Type the following command/s in the terminal.
 
    ```
    cd shrty-api
    ```
 
-3. Create a new virtual environment and install the required Python modules. Type the following command/s in the terminal. \
+3. Create a new virtual environment and install the required Python modules. Type the following command/s in the terminal.
    ```
    python3 -m venv venv
    source venv/bin/activate
