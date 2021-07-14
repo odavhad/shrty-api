@@ -29,15 +29,26 @@ Python, FastAPI, PostgreSQL, SQLAlchemy and PyJWT.
     pip install -r requirements.txt
     ```
     
-4. Before running the app locally, don't forget to export the following environment variables.
+4. Create a ".env" file containing following environment variables.
     ``` 
-    SECRET_KEY: "<SECRET KEY FOR THE APPLICATION>" (it is used for generating and verifying the JWT bearer tokens)
-    DATABASE_URL: "<POSTGRESQL DATABASE URL>" (make sure that the url starts with "postgresql://" and not "postgres://")
-    USER_NAME: "<USER NAME FOR AUTHENTICATION PURPOSE>"
-    PASSWORD: "<PASSWORD FOR AUTHENTICATION PURPOSE>"
+    SECRET_KEY="<SECRET KEY FOR THE APPLICATION> (it is used for generating and verifying the JWT bearer tokens)"
+    DATABASE_URL="<POSTGRESQL DATABASE URL> (make sure that the url starts with "postgresql://" and not "postgres://")"
+    USER_NAME="<USER NAME FOR AUTHENTICATION PURPOSE>"
+    PASSWORD="<PASSWORD FOR AUTHENTICATION PURPOSE>"
     ```
     
-5. Run the app using the Uvicorn server.
+5. Create a new Python file named as "run.py" and paste the following code in it.
+    ``` Python
+    import uvicorn
+    from dotenv import load_dotenv
+
+    if __name__ == "__main__":
+        load_dotenv(".env")
+        uvicorn.run("shrty:app", reload=True)
+
     ```
-    uvicorn shrty:app --reload
+6. Run the Python file.
     ```
+    python run.py
+    ```
+
