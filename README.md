@@ -14,7 +14,7 @@ Python, FastAPI, PostgreSQL, SQLAlchemy and PyJWT.
 
 1. Fork the repository and then clone the repository locally. Type the following command/s in the terminal. \
     ```
-    https://github.com/<YOUR USERNAME>/shrty-api.git
+    git clone https://github.com/<YOUR USERNAME>/shrty-api.git
     ```
 
 2. Navigate to the app directory. Type the following command/s in the terminal. \
