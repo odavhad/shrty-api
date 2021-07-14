@@ -49,7 +49,8 @@ Python, FastAPI, PostgreSQL, SQLAlchemy and PyJWT.
 
    ```
 
-6. Run the Python file.
+6. Run the Python file. Type the following command/s in the terminal.
+
    ```
    python run.py
    ```
