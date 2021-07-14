@@ -6,10 +6,10 @@ The user must be authenticated and should use the JWT authentication bearer toke
 
 The app uses PostgreSQL database connected via SQLAlchemy module in Python.
 
-### Tech Stack:
+**Tech Stack:** Python, FastAPI, PostgreSQL, SQLAlchemy and PyJWT.
 
-Python, FastAPI, PostgreSQL, SQLAlchemy and PyJWT.
+---
 
-## [Getting Started](Getting-Started.md)
+### [Getting Started](Getting-Started.md)
 
-## [API Endpoints](API-Endpoints.md)
+### [API Endpoints](API-Endpoints.md)
