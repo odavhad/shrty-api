@@ -12,7 +12,7 @@ from shrty.database import engine, get_db
 models.Base.metadata.create_all(bind=engine)
 
 
-app = FastAPI()
+app = FastAPI(docs_url=None, redoc_url=None)
 app.mount("/static", StaticFiles(directory="shrty/static"), name="static")
 
 
