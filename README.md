@@ -10,10 +10,14 @@ The app uses PostgreSQL database connected via SQLAlchemy module in Python.
 
 ---
 
-### [Getting Started](Getting-Started.md)
+## Preview
 
-### [API Endpoints](API-Endpoints.md)
+![preview](preview/preview.png)
 
-### License
+## [Getting Started](Getting-Started.md)
+
+## [API Endpoints](API-Endpoints.md)
+
+## License
 
 [MIT License](LICENSE)
