@@ -8,8 +8,6 @@ The app uses PostgreSQL database connected via SQLAlchemy module in Python.
 
 **Tech Stack:** Python, FastAPI, PostgreSQL, SQLAlchemy and PyJWT.
 
----
-
 ## Preview
 
 ![preview](preview/preview.png)
