@@ -1,5 +1,6 @@
 import os
 from fastapi import FastAPI, Depends, HTTPException, status, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.responses import RedirectResponse
@@ -13,6 +14,17 @@ models.Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI(docs_url=None, redoc_url=None)
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.mount("/static", StaticFiles(directory="shrty/static"), name="static")
 
 
