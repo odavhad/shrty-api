@@ -13,7 +13,7 @@ from shrty.database import engine, get_db
 models.Base.metadata.create_all(bind=engine)
 
 
-app = FastAPI(docs_url=None, redoc_url=None)
+app = FastAPI(redoc_url=None)
 
 origins = ["*"]
 
